@@ -27,10 +27,9 @@ namespace COMP003B.Assignment2
 
             app.UseRouting();
 
-            app.UseMiddleware<COMP003B.Assignment2.Middleware.RequestTrackerMiddleware>();
-
-
             app.UseWelcomePage("/welcome");
+
+            app.UseMiddleware<COMP003B.Assignment2.Middleware.RequestTrackerMiddleware>();
 
             app.UseAuthorization();
 
