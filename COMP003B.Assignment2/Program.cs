@@ -25,11 +25,13 @@ namespace COMP003B.Assignment2
 
             app.UseHttpsRedirection();
 
-            app.UseRouting();
+            app.UseStaticFiles();
 
             app.UseWelcomePage("/welcome");
 
             app.UseMiddleware<COMP003B.Assignment2.Middleware.RequestTrackerMiddleware>();
+
+            app.UseRouting();
 
             app.UseAuthorization();
 
